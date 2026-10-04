@@ -1,0 +1,31 @@
+[project]
+name = "socratictutor-backend"
+version = "0.1.0"
+description = "FastAPI and LangGraph backend for SocraticTutor"
+requires-python = ">=3.11"
+dependencies = [
+    "assistant-stream>=0.0.36,<0.1",
+    "fastapi>=0.116,<1",
+    "langchain-core>=0.3,<2",
+    "langchain-openai>=0.3.29,<2",
+    "langgraph>=0.6,<2",
+    "pydantic-settings>=2.10,<3",
+    "uvicorn[standard]>=0.35,<1",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28,<1",
+    "pytest>=8.4,<9",
+    "ruff>=0.12,<1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
