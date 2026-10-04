@@ -1,4 +1,7 @@
-# Socratic AI Tutor, a U of T TMI project
+# Tutor
+
+Tutor is a minimal chat app: a React and assistant-ui interface streams responses from a Python FastAPI service backed by LangGraph. The backend can connect to any endpoint that implements the OpenAI-compatible Chat Completions API.
+
 ## Requirements
 
 - Node.js 22.12 or newer and npm
@@ -25,3 +28,5 @@ npm run typecheck
 npm run lint
 npm test
 ```
+
+The Python integration tests use an in-memory chat model, so they need no endpoint or credentials.

@@ -94,7 +94,7 @@ def create_app(settings: Settings | None = None, model: BaseChatModel | None = N
     app_settings = settings or Settings()
     graph = create_graph(model) if model is not None else None
 
-    app = FastAPI(title="SocraticTutor API", version="0.1.0")
+    app = FastAPI(title="Tutor API", version="0.1.0")
     app.state.settings = app_settings
     app.state.graph = graph
 
