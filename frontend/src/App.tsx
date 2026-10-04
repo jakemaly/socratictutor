@@ -18,8 +18,8 @@ export default function App() {
   return (
     <main className="app-shell">
       <header className="topbar">
-        <a className="brand" href="/" aria-label="SocraticTutor home">
-          SocraticTutor
+        <a className="brand" href="/" aria-label="Tutor home">
+          Tutor
         </a>
         <button className="new-chat-button" onClick={() => setSession((value) => value + 1)}>
           <span aria-hidden="true">＋</span> New chat
@@ -67,7 +67,7 @@ function ChatContent({ error, clearError }: { error: string | null; clearError: 
             <div className="empty-state-content">
               <h1>Where should we begin?</h1>
               <Composer isRunning={isRunning} stop={() => aui.thread().cancelRun()} />
-              <p className="composer-disclaimer">SocraticTutor can make mistakes. Check important information.</p>
+              <p className="composer-disclaimer">Tutor can make mistakes. Check important information.</p>
             </div>
           </div>
         </AuiIf>
@@ -82,7 +82,7 @@ function ChatContent({ error, clearError }: { error: string | null; clearError: 
 
             <ThreadPrimitive.ViewportFooter className="thread-footer">
               <Composer isRunning={isRunning} stop={() => aui.thread().cancelRun()} />
-              <p className="composer-disclaimer">SocraticTutor can make mistakes. Check important information.</p>
+              <p className="composer-disclaimer">Tutor can make mistakes. Check important information.</p>
             </ThreadPrimitive.ViewportFooter>
           </ThreadPrimitive.Viewport>
         </AuiIf>
@@ -96,7 +96,7 @@ function Composer({ isRunning, stop }: { isRunning: boolean; stop: () => void })
     <ComposerPrimitive.Root className="composer">
       <ComposerPrimitive.Input
         aria-label="Message"
-        placeholder="Message SocraticTutor"
+        placeholder="Message Tutor"
         className="composer-input"
         rows={1}
         submitMode="enter"

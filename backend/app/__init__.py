@@ -1,1 +1,1 @@
-"""SocraticTutor backend application."""
+"""Tutor backend application."""

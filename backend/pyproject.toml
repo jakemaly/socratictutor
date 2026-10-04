@@ -1,7 +1,7 @@
 [project]
-name = "socratictutor-backend"
+name = "tutor-backend"
 version = "0.1.0"
-description = "FastAPI and LangGraph backend for SocraticTutor"
+description = "FastAPI and LangGraph backend for Tutor"
 requires-python = ">=3.11"
 dependencies = [
     "assistant-stream>=0.0.36,<0.1",
