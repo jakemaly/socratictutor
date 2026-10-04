@@ -1,7 +1,4 @@
 # Tutor
-
-Tutor is a minimal chat app: a React and assistant-ui interface streams responses from a Python FastAPI service backed by LangGraph. The backend can connect to any endpoint that implements the OpenAI-compatible Chat Completions API.
-
 ## Requirements
 
 - Node.js 22.12 or newer and npm
