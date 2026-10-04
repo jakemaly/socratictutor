@@ -1,0 +1,15 @@
+{
+  "name": "socratictutor",
+  "private": true,
+  "workspaces": ["frontend"],
+  "scripts": {
+    "dev": "concurrently -k -n frontend,backend -c cyan,green \"npm run dev --workspace frontend\" \"uv run --project backend uvicorn app.main:app --app-dir backend --reload --host 127.0.0.1 --port 8000\"",
+    "build": "npm run build --workspace frontend",
+    "typecheck": "npm run typecheck --workspace frontend",
+    "lint": "npm run lint --workspace frontend && uv run --project backend ruff check backend && uv run --project backend ruff format --check backend",
+    "test": "uv run --project backend pytest backend/tests"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
